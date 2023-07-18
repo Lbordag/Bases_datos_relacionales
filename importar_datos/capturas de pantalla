@@ -1,0 +1,10 @@
+#Para importar datos de un documento CSV#
+
+En schemas, vamos a la tabla calificaciones, al pasar el puntero salen 
+
+Después de importar los datos la clave primaria (PK) se borra, por lo que debemos volver a crearla, 
+como antes la Pk será id_estudiante. Lo hacemos con el siguiente comando: 
+
+ALTER TABLE `colegio_2`.`calificaciones` 
+CHANGE COLUMN `id_estudiante` `id_estudiante` INT NOT NULL AUTO_INCREMENT ,
+ADD PRIMARY KEY (`id_estudiante`);
