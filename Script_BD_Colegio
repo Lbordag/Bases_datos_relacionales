@@ -1,0 +1,31 @@
+CREATE TABLE `colegio_2`.`profesores` (
+  `id_profesor` INT NOT NULL AUTO_INCREMENT,
+  `nombre_profesor` VARCHAR(45) NULL,
+  `apellido_profesor` VARCHAR(45) NULL,
+  `id_curso` INT NULL,
+  PRIMARY KEY (`id_profesor`));
+
+
+CREATE TABLE `colegio_2`.`estudiantes` (
+  `id_studiante` INT NOT NULL AUTO_INCREMENT,
+  `nombre_estudiante` VARCHAR(45) NULL,
+  `apellido_estudiante` VARCHAR(45) NULL,
+  `id_curso` INT NULL,
+  PRIMARY KEY (`id_studiante`));
+
+CREATE TABLE `colegio_2`.`cursos` (
+  `id_curso` INT NOT NULL AUTO_INCREMENT,
+  `nombre_curso` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_curso`));
+
+
+CREATE TABLE `colegio_2`.`calificaciones` (
+  `id_estudiante` INT NOT NULL AUTO_INCREMENT,
+  `id_curso` INT NOT NULL,
+  `test_1` INT NULL,
+  `test_2` INT NULL,
+  `test_3` INT NULL,
+  `test_4` INT NULL,
+  `test_5` INT NULL,
+  `test_6` INT NULL,
+  PRIMARY KEY (`id_estudiante`, `id_curso`));
