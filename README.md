@@ -1,6 +1,7 @@
 # Bases_datos_relacionales
 
 Este repositorio tiene como objetivo mostrar el proceso de creación de una base de datos relacional en MySQL.
+En este caso vamos a hacer una BD para un colegio. 
 
 Este proceso consta de los siguientes pasos: Crear esquema Entidad-Relación. 
 
