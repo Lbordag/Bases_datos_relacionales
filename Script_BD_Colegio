@@ -29,3 +29,22 @@ CREATE TABLE `colegio_2`.`calificaciones` (
   `test_5` INT NULL,
   `test_6` INT NULL,
   PRIMARY KEY (`id_estudiante`, `id_curso`));
+ 
+# Para crear las claves foránes (FK)#
+
+ALTER TABLE `colegio_2`.`profesores` 
+ADD INDEX `relacion_tabla_cursos_idx` (`id_curso` ASC) VISIBLE;
+;
+ALTER TABLE `colegio_2`.`profesores` 
+ADD CONSTRAINT `relacion_tabla_cursos`
+  FOREIGN KEY (`id_curso`)
+  REFERENCES `colegio_2`.`cursos` (`id_curso`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `colegio_2`.`estudiantes` 
+ADD CONSTRAINT `id_curso`
+  FOREIGN KEY (`id_curso`)
+  REFERENCES `colegio_2`.`cursos` (`id_curso`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
